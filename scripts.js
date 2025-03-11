@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  const audioPlayer = document.getElementById('audioplayer');
+  const audioControls = document.getElementById('audiocontrols');
   const audioSource = document.getElementById('audiosource');
   const audioButtons = document.querySelectorAll('.audiobutton');
 
@@ -24,18 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (audioSource.src !== trackSrc) {
         audioSource.src = trackSrc;
-        audioPlayer.load();
+        audioControls.load();
       }
 
-      if (audioPlayer.paused) {
-        audioPlayer.play();
+      if (audioControls.paused) {
+        audioControls.play();
         e.target.textContent = '⏸';
       } else {
-        audioPlayer.pause();
+        audioControls.pause();
         e.target.textContent = e.target.getAttribute('data-track-number');
       }
       
-      playButtons.forEach(btn => {
+      audioButtons.forEach(btn => {
         if (btn !== e.target) {
             btn.textContent = btn.getAttribute('data-track-number');
         }
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  audioPlayer.addEventListener('ended', function () {
-    playButtons.forEach(button => {
+  audioControls.addEventListener('ended', function () {
+    audioButtons.forEach(button => {
       button.textContent = button.getAttribute('data-track-number');
     });
   });
