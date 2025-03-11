@@ -48,4 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
       button.textContent = button.getAttribute('data-track-number');
     });
   });
+  
+  document.addEventListener('input', (e) => {
+    if (e.target.matches('textarea')) {
+      e.target.style.height = '';
+      e.target.style.paddingBottom = '0';
+      e.target.style.height = `${e.target.scrollHeight}px`;
+    }
+  });
 });
