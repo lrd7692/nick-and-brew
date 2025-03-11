@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark');
     nightLight.classList.remove('hide');
-    
   }
 
   document.addEventListener('click', (e) => {
@@ -14,13 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  const audioPlayer = document.getElementById('audio-player');
-  const audioSource = document.getElementById('audio-source');
-  const playButtons = document.querySelectorAll('.play-button');
+  const audioPlayer = document.getElementById('audioplayer');
+  const audioSource = document.getElementById('audiosource');
+  const audioButtons = document.querySelectorAll('.audiobutton');
 
-  playButtons.forEach(button => {
+  audioButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-      const number = e.target.textContent;
       const track = e.target.parentElement;
       const trackSrc = track.getAttribute('data-src');
 

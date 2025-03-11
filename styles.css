@@ -69,6 +69,17 @@ main article {
   flex-direction:row;
   align-items:left;
 }
+main article h1 {
+  font-size:1.25rem;
+  margin:0;
+  padding:0;
+}
+main article h2 {
+  font-size:1rem;
+  font-weight:normal;
+  margin:0;
+  padding:0;
+}
 #pullchain {
   position:fixed;
   top:-1rem;
@@ -118,7 +129,7 @@ main article {
   display:none;
 }
 
-.player {
+.audioplayer {
     border:.0625rem solid lightgray;
     border-radius: .5rem;
     box-shadow:0 0 1rem -.5rem gray;
@@ -126,30 +137,14 @@ main article {
     margin:0;
     padding:1rem;
 }
-
-.dark .player {
+.dark .audioplayer {
   border:.0625rem solid gray;
-    box-shadow:0 0 1rem -.5rem black;
+  box-shadow:0 0 1rem -.5rem black;
 }
-
-.player img {
+.audioplayer img {
   float:left;
   margin:0 1rem 0 0;
   padding:0 0 1rem 0;
-}
-
-.player h1 {
-  font-size:1.25rem;
-  margin:0;
-  padding:0;
-}
-
-section h2 {
-  text-align:left;
-  font-size:1rem;
-  font-weight:300;
-  margin:0;
-  padding:0;
 }
 .track {
     clear:left;
@@ -193,13 +188,9 @@ audio {
   padding:0;  
 }
 #events h1 {
-  font-size:1.25rem;
-  margin:0;
   padding:1rem 0 0 1rem;
 }
 #events h2 {
-  font-size:1rem;
-  margin:0;
   padding:0 0 0 1rem;
 }
 
