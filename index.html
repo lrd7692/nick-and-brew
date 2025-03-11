@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="scripts.js"></script>
+    <title>Nick and Brew</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Bringing you the finest in Nick and Brewgrass music since 2023.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="images/nickandbrewlogo.svg" alt="Nick and Brew" height="80px" width="210px">
+      </figure>
+      <img id="pullchain" src="images/pullchain.webp" alt="Pull Chain" title="Hit the lights!" height="114px" width="14">
+      <div id="nightlight" class="hide"></div>
+    </header>
+    <main>
+      <header>
+        <h1>Music & Events</h1>
+      </header>
+      <article>
+        <section class="player">
+            <img src="images/brewgrass.webp" alt="Brewgrass" height="80px" width="80px">
+            <h1>Brewgrass</h1>
+            <h2>Brew Davis</h2>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865206.mp3">
+                <button class="play-button" data-track-number="1">1</button>
+                <span>Chattanooga</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865207.mp3">
+                <button class="play-button" data-track-number="2">2</button>
+                <span>Wagon Load</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865205.mp3">
+                <button class="play-button" data-track-number="3">3</button>
+                <span>Darlin' Caroline</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865208.mp3">
+                <button class="play-button" data-track-number="4">4</button>
+                <span>Kerry</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865209.mp3">
+                <button class="play-button" data-track-number="5">5</button>
+                <span>Put It Back Together</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865223.mp3">
+                <button class="play-button" data-track-number="6">6</button>
+                <span>Broken Man's Waltz</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865224.mp3">
+                <button class="play-button" data-track-number="7">7</button>
+                <span>She Was a Rose Once</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865225.mp3">
+                <button class="play-button" data-track-number="8">8</button>
+                <span>Thomas Bigfoot Spencer</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865226.mp3">
+                <button class="play-button" data-track-number="9">9</button>
+                <span>White Dog</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865227.mp3">
+                <button class="play-button" data-track-number="10">10</button>
+                <span>Lucky Man</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865228.mp3">
+                <button class="play-button" data-track-number="11">11</button>
+                <span>Tangerine Moon</span>
+            </div>
+            <div class="track" data-src="https://nickandbrew.com/player/2835094/tracks/3865229.mp3">
+                <button class="play-button" data-track-number="12">12</button>
+                <span>Rollin' On</span>
+            </div>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="" type="audio/mpeg">
+            </audio>
+        </section>
+        <section id="events">
+          <h1>Saturday, August 23</h1>
+          <h2><a href="https://noc.com/events/river-and-brews/">Rivers and Brews</a><br />Nantahala Outdoor Center<br /> Bryson City, NC</h2>
+          <h1>Saturday, October 4</h1>
+          <h2><a href="https://www.glad-nc.org/ola-belle-reed-festival">Ola Belle Reed Festival</a><br />JO Blevins Meadow<br />Lansing, NC</h2>
+          <h1>Saturday, October 11</h1>
+          <h2><a href="https://www.resort.tryon.com/">Tryon International Equestrian Center</a><br />Mill Spring, SC</h2>
+          <h1>Saturday, October 25</h1>
+          <h2><a href="https://noc.com/events/gaf/">Guest Appreciation Festival</a><br />Nantahala Outdoor Center<br />Bryson City, NC</h2>
+        </section>
+<!--         <section id="contactus">
+          <h1>Contact Us</h1>
+          <form action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="">
+            <input type="hidden" name="redirect" value="">
+            <input type="hidden" name="from_name" value="">
+            <input id="name" type="text" name="name" autocomplete="on" placeholder="Name *" required>
+            <input id="email" type="email" name="email" autocomplete="on" placeholder="Email *" required>
+            <input id="phone" type="phone" name="phone" autocomplete="on" placeholder="Phone">
+            <textarea id="message" name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </section> -->
+      </article>
+    </main>
+  </body>
+</html>

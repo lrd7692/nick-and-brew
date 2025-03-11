@@ -1,0 +1,252 @@
+@font-face {
+  font-family:Zico;
+  src:url(fonts/zicothin.ttf) format(truetype);
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face {
+  font-family:Zico;
+  src:url(fonts/zicoblack.ttf) format(truetype);
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+body {
+  height:100vh;
+  background-image:url('images/bandphoto.webp');
+  background-size:80% auto;
+  background-repeat:no-repeat;
+  background-position:center 7rem;
+  background-attachment:fixed;
+  margin:0;
+  padding:0;
+}
+header {
+  margin:0;
+  padding:0;
+}
+header figure {
+  z-index:0;
+  position:fixed;
+  top:1rem;
+  left:1rem;
+  transition:left 1s ease-in-out,
+    margin 1s ease-in-out;
+  margin:0;
+  padding:0;
+}
+header figure img {
+  margin:0;
+  padding:0;
+}
+main {
+  z-index:1;
+  position:relative;
+  font-family:Helvetica,Arial,sans-serif;
+  height:80rem;
+  background-color:white;
+  border-top:.0625rem solid lightgray;
+  margin:75vh 0 0 0;
+  padding:1rem;
+  box-shadow:0 -1rem 1rem -1rem gray;
+}
+main header {
+  font-family:Zico,Helvetica,Arial,sans-serif;
+  margin:0;
+  padding:0 0 1rem 0;
+}
+main header h1 {
+  font-weight:700;
+  margin:0;
+  padding:0;
+}
+main header h2 {
+  font-weight:normal;
+}
+main article {
+  display:flex;
+  flex-direction:row;
+  align-items:left;
+}
+#pullchain {
+  position:fixed;
+  top:-1rem;
+  left:14.875rem;
+  cursor:pointer;
+  transition:
+    top .2s ease-in-out,
+    left 1s ease-in-out,
+    margin 1s ease-in-out;
+  margin:0;
+  padding:0;
+}
+#pullchain:hover,
+#pullchain:active {
+  top:0;
+}
+#nightlight {
+  position:fixed;
+  top:-20rem;
+  left:-3.4375rem;
+  height:20rem;
+  width:20rem;
+  background-color:#fbdf59;
+  border-radius:20rem;
+  box-shadow:0 0 12rem #fbdf59;
+  transition:left 1s ease-in-out,
+    margin 1s ease-in-out;
+  margin:0;
+  padding:0;
+}
+.dark {
+  background-color:#202124;
+  color:white;
+}
+.dark main {
+  background-color:#202124;
+  border-top:.0625rem solid gray;
+  box-shadow:0 -1rem 1rem -1rem black;
+}
+.dark main header,
+.dark main article,
+.dark main button {
+  background-color:#202124;
+  color:white;
+}
+.hide {
+  display:none;
+}
+
+.player {
+    border:.0625rem solid lightgray;
+    border-radius: .5rem;
+    box-shadow:0 0 1rem -.5rem gray;
+    width: 17.8125rem;
+    margin:0;
+    padding:1rem;
+}
+
+.dark .player {
+  border:.0625rem solid gray;
+    box-shadow:0 0 1rem -.5rem black;
+}
+
+.player img {
+  float:left;
+  margin:0 1rem 0 0;
+  padding:0 0 1rem 0;
+}
+
+.player h1 {
+  font-size:1.25rem;
+  margin:0;
+  padding:0;
+}
+
+section h2 {
+  text-align:left;
+  font-size:1rem;
+  font-weight:300;
+  margin:0;
+  padding:0;
+}
+.track {
+    clear:left;
+    border-radius:.25rem;
+    padding:.25rem 0 .25rem .25rem;
+}
+
+.track:hover,
+.track:active {
+  background-color:#3dbfdd;
+  color:white;
+}
+
+.play-button {
+    border:none;
+    border-radius:.25rem;
+    height:1.5rem;
+    width:1.5rem;
+    padding:0;
+    background-color:white;
+    text-align: center;
+    text-decoration: none;
+    margin:0;
+    cursor: pointer;
+}
+
+.play-button:hover,
+.play-button:active {
+  background-color:#3dbfdd;
+  color:white;
+}
+
+audio {
+    width: 100%;
+    border-radius:.25rem;
+    margin-top:1rem;
+}
+
+#events {
+  margin:0;
+  padding:0;  
+}
+#events h1 {
+  font-size:1.25rem;
+  margin:0;
+  padding:1rem 0 0 1rem;
+}
+#events h2 {
+  font-size:1rem;
+  margin:0;
+  padding:0 0 0 1rem;
+}
+
+main article input,
+main article textarea {
+  display:block;
+  width: 15.8125rem;
+  resize:none;
+  border:.0625rem solid lightgray;
+  border-radius:.25rem;
+  margin:1rem;
+  padding:.25rem;
+}
+#contactus button {
+  display:block;
+  border:.0625rem solid black;
+  border-radius:.25rem;
+  margin:1rem;
+  padding:.25rem;
+}
+
+#contactus h1 {
+  font-size:1.25rem;
+  margin:0;
+  padding:1rem 0 0 1rem;
+}
+a {
+    color:#ad1e16;
+    text-decoration-style:dotted;
+}
+.dark a {
+    color:#fbdf59;
+}
+
+@media (max-width:46rem) {
+  header figure {
+    left:50%;
+    margin:0 0 0 -105px;;
+  }
+  #pullchain {
+    left:50%;
+    margin:0 0 0 7.4375rem;
+  }
+  #nightlight {
+    left:50%;
+    transition:left 1s ease-in-out,
+      margin 1s ease-in-out;
+    margin:0 0 0 -10rem;
+  }
+}
