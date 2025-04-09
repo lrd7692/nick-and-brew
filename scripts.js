@@ -1,15 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const nightLight = document.getElementById('nightlight');
+  const mode = localStorage.getItem('mode');
   
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  if (mode !== null) {
+    if (mode === 'dark') {
+      document.body.classList.add('dark');
+    } else if (mode === 'light') {
+      document.body.classList.remove('dark');
+    }
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark');
-    nightLight.classList.remove('hide');
   }
 
   document.addEventListener('click', (e) => {
     if (e.target.id === 'pullchain') {
       document.body.classList.toggle('dark');
-      nightLight.classList.toggle('hide');
+      if (document.body.classList.contains('dark')) {
+        localStorage.setItem('mode', 'dark');
+      } else {
+        localStorage.setItem('mode', 'light');
+      }
     }
   });
   
@@ -29,23 +38,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (audioControls.paused) {
         audioControls.play();
-        e.target.textContent = '⏸';
+        e.target.textContent = '||';
       } else {
         audioControls.pause();
-        e.target.textContent = e.target.getAttribute('data-track-number');
+        e.target.textContent = e.target.getAttribute('data-track');
       }
       
-      audioButtons.forEach(btn => {
-        if (btn !== e.target) {
-            btn.textContent = btn.getAttribute('data-track-number');
+      audioButtons.forEach(button => {
+        if (button !== e.target) {
+            button.textContent = button.getAttribute('data-track');
         }
       });
     });
   });
 
-  audioControls.addEventListener('ended', function () {
+  audioControls.addEventListener('ended', () => {
     audioButtons.forEach(button => {
-      button.textContent = button.getAttribute('data-track-number');
+      button.textContent = button.getAttribute('data-track');
     });
   });
   

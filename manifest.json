@@ -1,0 +1,21 @@
+{
+  "name": "Nick & Brew",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Bringing you the finest in Nick and Brewgrass music since 2023.",
+  "icons": [
+    {
+      "src": "images/favicon192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/favicon512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
